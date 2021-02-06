@@ -1,17 +1,23 @@
 ﻿<Properties StartupConfiguration="{EAC31AC5-4794-41A1-AC13-C216A58DB484}|Default">
   <MonoDevelop.Ide.ItemProperties.samples__hatena PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="samples_hatena/Services/FileManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="samples_hatena/Views/Shared/_Layout.cshtml">
     <Files>
-      <File FileName="samples_hatena/Controllers/HomeController.cs" Line="1" Column="1" />
-      <File FileName="samples_hatena/Services/FileManager.cs" Line="8" Column="19" />
+      <File FileName="samples_hatena/Controllers/HomeController.cs" Line="32" Column="10" />
+      <File FileName="samples_hatena/Views/Shared/_Layout.cshtml" Line="32" Column="14" />
+      <File FileName="samples_hatena/Views/Home/Index.cshtml" Line="7" Column="113" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="samples_hatena" expanded="True">
             <Node name="samples_hatena" expanded="True">
-              <Node name="Services" expanded="True">
-                <Node name="FileManager.cs" selected="True" />
+              <Node name="Controllers" expanded="True" />
+              <Node name="Services" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Home" expanded="True" />
+                <Node name="Shared" expanded="True">
+                  <Node name="_Layout.cshtml" selected="True" />
+                </Node>
               </Node>
             </Node>
           </Node>

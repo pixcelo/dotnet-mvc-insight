@@ -1,0 +1,45 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+
+<style>
+
+.container {
+  width: 1000px;
+  display: -webkit-flex;
+  display: flex;
+}
+.main {
+  display: block;
+  width: 660px;
+  margin-right: 20px;
+}
+.sidebar {
+  width: 320px;
+}
+.sidebar__item {
+  margin-bottom: 20px;
+}
+.sidebar__item--fixed {
+  position: sticky;
+  margin-bottom: 0;
+  top: 10px;
+  z-index: 1;
+}
+
+</style>
+
+<div class="container">
+    <main class="main">
+        <!-- メインコンテンツ -->
+    </main>
+    <div class="sidebar">
+        <div class="sidebar__item">
+            <!-- 中身 -->
+        </div>
+        <div class="sidebar__item sidebar__item--fixed">
+            <!-- 固定・追従させたいエリア -->
+        </div>
+    </div>
+</div>

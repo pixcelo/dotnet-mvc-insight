@@ -91,3 +91,7 @@
 /Users/tetsu/Projects/samples_hatena/samples_hatena/obj/Debug/netcoreapp3.1/samples_hatena.dll
 /Users/tetsu/Projects/samples_hatena/samples_hatena/obj/Debug/netcoreapp3.1/samples_hatena.pdb
 /Users/tetsu/Projects/samples_hatena/samples_hatena/obj/Debug/netcoreapp3.1/samples_hatena.genruntimeconfig.cache
+/Users/tetsu/Projects/samples_hatena/samples_hatena/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_SideBar.cshtml.g.cs
+/Users/tetsu/Projects/samples_hatena/samples_hatena/obj/Debug/netcoreapp3.1/Razor/Views/Shared/Index.cshtml.g.cs
+/Users/tetsu/Projects/samples_hatena/samples_hatena/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_Footer.cshtml.g.cs
+/Users/tetsu/Projects/samples_hatena/samples_hatena/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_Header.cshtml.g.cs

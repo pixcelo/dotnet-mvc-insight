@@ -12,8 +12,8 @@ namespace samples_hatena.Services
 
         public List<string> GetCsvData()
         {
-            var filePath = @"/Users/tetsu/Projects/samples_hatena/samples_hatena/csv/kinki.csv";
-            var csvlist = new List<string>();
+            string filePath = @"/Users/tetsu/Projects/samples_hatena/samples_hatena/csv/kinki.csv";
+            List<string> csvlist = new List<string>();
 
             StreamReader reader = new StreamReader(filePath);
             {
