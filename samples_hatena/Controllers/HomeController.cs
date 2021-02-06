@@ -1,17 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using samples_hatena.Models;
+using samples_hatena.Services;
 
 namespace samples_hatena.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        FileManager _fileManager = new FileManager(); 
 
         public HomeController(ILogger<HomeController> logger)
         {
@@ -20,6 +18,7 @@ namespace samples_hatena.Controllers
 
         public IActionResult Index()
         {
+            var csvList = _fileManager.GetCsvData();
             return View();
         }
 

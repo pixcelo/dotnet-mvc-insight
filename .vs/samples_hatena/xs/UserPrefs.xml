@@ -1,4 +1,28 @@
 ﻿<Properties StartupConfiguration="{EAC31AC5-4794-41A1-AC13-C216A58DB484}|Default">
-  <MonoDevelop.Ide.ItemProperties.samples__hatena FirstBuild="True" />
+  <MonoDevelop.Ide.ItemProperties.samples__hatena PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="samples_hatena/Services/FileManager.cs">
+    <Files>
+      <File FileName="samples_hatena/Controllers/HomeController.cs" Line="1" Column="1" />
+      <File FileName="samples_hatena/Services/FileManager.cs" Line="8" Column="19" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="samples_hatena" expanded="True">
+            <Node name="samples_hatena" expanded="True">
+              <Node name="Services" expanded="True">
+                <Node name="FileManager.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>
