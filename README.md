@@ -1,0 +1,1 @@
+＃samples_hatena
