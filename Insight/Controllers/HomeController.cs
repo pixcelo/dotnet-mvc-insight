@@ -7,6 +7,7 @@ namespace Insight.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private static log4net.ILog logger = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod()?.DeclaringType);
 
         public HomeController(ILogger<HomeController> logger)
         {
@@ -15,6 +16,7 @@ namespace Insight.Controllers
 
         public IActionResult Index()
         {
+            logger.Debug("log4net test");
             return View();
         }
 
