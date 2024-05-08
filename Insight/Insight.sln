@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34723.18
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Insight", "Insight.csproj", "{308C51FD-D798-4149-A522-B8D485C48F61}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{308C51FD-D798-4149-A522-B8D485C48F61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{308C51FD-D798-4149-A522-B8D485C48F61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{308C51FD-D798-4149-A522-B8D485C48F61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{308C51FD-D798-4149-A522-B8D485C48F61}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0388FA65-D671-46BA-BD9D-0F4DEB7ACCC8}
+	EndGlobalSection
+EndGlobal
