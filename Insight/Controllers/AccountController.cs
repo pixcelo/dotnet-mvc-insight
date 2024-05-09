@@ -34,7 +34,10 @@ namespace Insight.Controllers
 
             var accessToken = result.Properties.GetTokenValue("access_token");
 
-            return RedirectToAction("Index", "Home");
+            // アクセストークンを一時的に保存
+            TempData["AccessToken"] = accessToken;
+
+            return RedirectToAction("Index", "Insight");
         }
 
         public async Task<IActionResult> Logout()
