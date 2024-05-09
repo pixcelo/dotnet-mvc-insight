@@ -24,6 +24,16 @@ namespace Insight.Controllers
 
         public async Task<IActionResult> LoginCallback()
         {
+            var result = await HttpContext.AuthenticateAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            
+            if (result?.Succeeded != true)
+            {
+                // ログイン失敗
+                return RedirectToAction("Index", "Home");
+            }
+
+            var accessToken = result.Properties.GetTokenValue("access_token");
+
             return RedirectToAction("Index", "Home");
         }
 

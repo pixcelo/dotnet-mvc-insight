@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.Facebook;
 using Microsoft.AspNetCore.Authentication.Google;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,7 +11,8 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-    options.DefaultChallengeScheme = GoogleDefaults.AuthenticationScheme;
+    //options.DefaultChallengeScheme = GoogleDefaults.AuthenticationScheme;    
+    options.DefaultChallengeScheme = FacebookDefaults.AuthenticationScheme;
 })
 .AddCookie()
 .AddGoogle(options =>
@@ -18,6 +20,14 @@ builder.Services.AddAuthentication(options =>
     var googleAuthSection = builder.Configuration.GetSection("Authentication:Google");
     options.ClientId = googleAuthSection["ClientId"];
     options.ClientSecret = googleAuthSection["ClientSecret"];
+})
+.AddFacebook(options =>
+{
+    var facebookAuthSection = builder.Configuration.GetSection("Authentication:Facebook");
+    options.AppId = facebookAuthSection["AppId"];
+    options.AppSecret = facebookAuthSection["AppSecret"];
+    options.AccessDeniedPath = "/Home";
+    options.SaveTokens = true;
 });
 
 var app = builder.Build();
