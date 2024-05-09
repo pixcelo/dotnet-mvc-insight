@@ -1,0 +1,51 @@
+﻿@using Insight.ViewModels
+@model LoginViewModel
+
+<style type="text/css">
+    .form-button {
+        display: flex;
+        justify-content: space-around;
+        width: 400px;
+        margin: 15px;
+    }
+</style>
+
+<h2>ログイン</h2>
+
+<form asp-action="Login" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="form-group">
+        <label asp-for="Email">メールアドレス</label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Password">パスワード</label>
+        <input asp-for="Password" class="form-control" />
+        <span asp-validation-for="Password" class="text-danger"></span>
+    </div>
+
+    <div class="form-group form-check">
+        <input asp-for="RememberMe" class="form-check-input" />
+        <label asp-for="RememberMe" class="form-check-label">ログイン状態を保存する</label>
+    </div>
+
+
+    <div class="form-button">
+        <button type="submit" class="btn btn-primary">ログイン</button>
+
+        <div class="form-group">
+            <a class="btn btn-info" asp-controller="Account" asp-action="Login">Googleでログイン</a>
+        </div>
+
+        <div class="form-group">
+            <a class="btn btn-primary" asp-controller="Account" asp-action="FacebookLogin">Facebookでログイン</a>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <p>
+            アカウントをお持ちでない方 <a asp-controller="Account" asp-action="Register">新規登録はこちら</a>
+        </p>
+    </div>
+</form>
