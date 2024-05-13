@@ -1,5 +1,5 @@
 const btn = document.getElementById("btn-get");
-btn.addEventListener("click", getData);
+btn.addEventListener("click", getInsightData);
 
 async function getInsightData() {
     try {
