@@ -8,7 +8,13 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddHttpClient();
-builder.Services.AddTransient<IInstagramApiClient, InstagramApiClient>();
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddSingleton<IAccessTokenAccessor, AccessTokenAccessor>();
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(180);
+    options.Cookie.IsEssential = true;
+});
 
 // 認証サービス
 builder.Services.AddAuthentication(options =>
@@ -50,6 +56,7 @@ app.UseRouting();
 
 app.UseAuthentication();
 app.UseAuthorization();
+app.UseSession();
 
 app.MapControllerRoute(
     name: "default",

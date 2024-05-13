@@ -1,4 +1,5 @@
 ﻿
+using Insight.Services;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
@@ -6,7 +7,14 @@ using Microsoft.AspNetCore.Mvc;
 namespace Insight.Controllers
 {
     public class AccountController : Controller
-    {
+    {        
+        private readonly IAccessTokenAccessor _accessTokenAccessor;
+
+        public AccountController(IAccessTokenAccessor accessTokenAccessor)
+        {
+            _accessTokenAccessor = accessTokenAccessor;
+        }
+
         public IActionResult Index()
         {
             return View();
@@ -32,12 +40,11 @@ namespace Insight.Controllers
                 return RedirectToAction("Index", "Home");
             }
 
-            var accessToken = result.Properties.GetTokenValue("access_token");
-
             // アクセストークンを一時的に保存
-            TempData["AccessToken"] = accessToken;
+            var accessToken = result.Properties.GetTokenValue("access_token");
+            _accessTokenAccessor.SetAccessToken(accessToken);
 
-            return RedirectToAction("Index", "Insight");
+            return RedirectToAction("Index", "Board");
         }
 
         public async Task<IActionResult> Logout()
