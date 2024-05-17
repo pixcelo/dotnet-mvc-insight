@@ -421,5 +421,6 @@ node_modules
 psd
 thumb
 sketch
+*.key
 
 # End of https://www.toptal.com/developers/gitignore/api/aspnetcore,node,react
