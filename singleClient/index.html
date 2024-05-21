@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insight</title>
+    <style>
+        #a, #b ,#c {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <p>List</p>
+    <ul>
+        <li id="a">a</li>
+        <li id="b">b</li>
+        <li id="c">c</li>
+    </ul>
+    <script>
+
+        const a = document.getElementById("a");
+        a.addEventListener("click", () => {
+            console.log("a");
+        });
+
+    </script>
+</body>
+</html>
