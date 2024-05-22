@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34723.18
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InsightDDD", "InsightDDD.csproj", "{E96DD30F-951A-4DE4-AF3F-21C5C63DB69C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E96DD30F-951A-4DE4-AF3F-21C5C63DB69C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E96DD30F-951A-4DE4-AF3F-21C5C63DB69C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E96DD30F-951A-4DE4-AF3F-21C5C63DB69C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E96DD30F-951A-4DE4-AF3F-21C5C63DB69C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {241732B3-5D07-490C-A4D5-2C32615A3E8E}
+	EndGlobalSection
+EndGlobal
