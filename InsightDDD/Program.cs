@@ -1,7 +1,35 @@
+using InsightDDD.Services;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.Facebook;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddHttpClient();
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddSingleton<IAccessTokenAccessor, AccessTokenAccessor>();
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(180);
+    options.Cookie.IsEssential = true;
+});
+
+// 認証サービス
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;  
+    options.DefaultChallengeScheme = FacebookDefaults.AuthenticationScheme;
+})
+.AddCookie()
+.AddFacebook(options =>
+{
+    var facebookAuthSection = builder.Configuration.GetSection("Authentication:Facebook");
+    options.AppId = facebookAuthSection["AppId"];
+    options.AppSecret = facebookAuthSection["AppSecret"];
+    options.AccessDeniedPath = "/Home";
+    options.SaveTokens = true;
+});
 
 var app = builder.Build();
 
@@ -17,8 +45,9 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
+app.UseAuthentication();
 app.UseAuthorization();
+app.UseSession();
 
 app.MapControllerRoute(
     name: "default",
