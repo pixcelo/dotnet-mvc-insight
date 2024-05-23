@@ -18,11 +18,24 @@
         <li id="c">c</li>
     </ul>
     <script>
+        
+        async function run() {
+            const jsonData = await fetchData();
+            console.log(jsonData);
+        }
+
+        async function fetchData() {
+            try {
+                const response = await fetch('key.json');
+                const data = await response.json();
+                return data;
+            } catch (error) {
+                console.error(error);
+            }
+        }
 
         const a = document.getElementById("a");
-        a.addEventListener("click", () => {
-            console.log("a");
-        });
+        a.addEventListener("click", run);
 
     </script>
 </body>
