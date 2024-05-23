@@ -1,1 +1,10 @@
-﻿
+﻿.navi {
+    cursor: pointer;
+}
+
+.media-caption {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 50px;
+}
