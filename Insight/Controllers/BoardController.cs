@@ -7,7 +7,7 @@ namespace Insight.Controllers
 {
     public class BoardController : Controller
     {
-        [Authorize]
+        //[Authorize]
         public IActionResult Index()
         {
             return View();
