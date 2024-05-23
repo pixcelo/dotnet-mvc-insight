@@ -1,6 +1,8 @@
+using InsightDDD.Models;
 using InsightDDD.Services;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.Facebook;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +15,12 @@ builder.Services.AddSession(options =>
 {
     options.IdleTimeout = TimeSpan.FromMinutes(180);
     options.Cookie.IsEssential = true;
+});
+
+// データベース
+builder.Services.AddDbContext<InsightDbContext>(options =>
+{
+    options.UseSqlite("Data Source = Insight.db");
 });
 
 // 認証サービス

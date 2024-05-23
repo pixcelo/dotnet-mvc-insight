@@ -15,6 +15,21 @@
 - [SSH設定](https://www.xserver.ne.jp/manual/man_server_ssh.php)
 - [SSHソフトの設定(Tera Term)](https://www.xserver.ne.jp/manual/man_server_ssh_connect_tera.php)
 
+## Database
+SQLiteの接続方法<br />
+[Getting Started with EF Core](https://learn.microsoft.com/en-us/ef/core/get-started/overview/first-app?tabs=netcore-cli)
+```powershell
+dotnet tool install --global dotnet-ef
+dotnet add package Microsoft.EntityFrameworkCore.Design
+dotnet ef migrations add InitialCreate
+dotnet ef database update
+```
+ビルドに失敗する場合、`dotnet ef migrations add InitialCreate -v`で詳細を確認する
+```powershell
+Build started...
+Build failed. Use dotnet build to see the errors.
+```
+
 ## Reference
 - [ビジネス向けFacebookログイン](https://developers.facebook.com/docs/facebook-login/facebook-login-for-business/)
 - [ログインフローを手動で構築する](https://developers.facebook.com/docs/facebook-login/guides/advanced/manual-flow)
